@@ -6,10 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rotespferd/gitode.git"
+  },
   "keywords": [
     "git"
   ],
   "author": "Marian Sievers",
+  "contributors": [ 
+    {
+      "name": "Marian Sievers",
+      "email": "dev@mariansievers.de"
+    } 
+  ],
   "license": "MIT"
 }
