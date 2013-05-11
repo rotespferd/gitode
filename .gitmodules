@@ -1,0 +1,3 @@
+[submodule "test/scaffold"]
+	path = test/scaffold
+	url = /Users/marian/.tmp/scaffold
