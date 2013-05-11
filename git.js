@@ -4,22 +4,19 @@ var exec = require('child_process').exec;
 
 var basiccmd = "git ";
 
-exports.init = function(dir) {
+exports.init = function(dir, callback) {
     var cmd = basiccmd + " init " + dir;
-    execCmd(cmd);
+    execCmd(cmd, callback);
 };
 
-exports.initBare = function(dir) {
+exports.initBare = function(dir, callback) {
     var cmd = basiccmd + " init --bare " + dir;
-    execCmd(cmd);
+    execCmd(cmd, callback);
 };
 
-exports.clone = function(repo, path) {
-    console.log("Clone repo " + repo + " to path " + path);
-  
+exports.clone = function(repo, path, callback) {
     var cmd = basiccmd + "clone " + repo + " " + path;
-    console.log(cmd);
-    execCmd(cmd);
+    execCmd(cmd, callback);
 };
 
 exports.commit = function(msg) {
@@ -32,8 +29,9 @@ exports.commit = function(msg) {
 
 
 // helper methods
-function execCmd(cmd) {
-    exec(cmd, puts);
+function execCmd(cmd, callback) {
+    exec(cmd, function(error, stdout, stderr) {
+        //console.log(stdout);
+        callback();
+    });
 }
-
- function puts(error, stdout, stderr) { sys.puts(stdout) };
