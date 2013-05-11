@@ -4,7 +4,7 @@
   "description": "An abstraction-layer to git for node.js.",
   "main": "git.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
       "email": "dev@mariansievers.de"
     } 
   ],
+  "devDependencies": {
+      "mocha": ">=1.9.0",
+      "should": ">=1.2.2"
+    },
   "license": "MIT"
 }
