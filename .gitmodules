@@ -1,0 +1,3 @@
+[submodule "test/scaffold"]
+	path = test/scaffold
+	url = git://github.com/rotespferd/scaffold-repo.git

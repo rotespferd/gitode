@@ -67,11 +67,12 @@ describe("Gitode", function() {
     });
 
     describe("Branch", function() {
-        var testBranchPath = pathRepos + "/branch";
+        var testBranchPath = "test/scaffold";
         before(function(done) {
-            fs.copyRecursive(scaffoldPath, testBranchPath, function(err) {
+            /*fs.copyRecursive(scaffoldPath, testBranchPath, function(err) {
                 done();
-            });
+            });*/
+            done();
         });
 
         describe("#branchList()", function() {
