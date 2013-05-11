@@ -5,21 +5,27 @@ Git(n)ode is an abstraction-layer to use [git](http://git-scm.com/) within node.
 ## Usage
 
 ### Init module
-````
+````javascript
 var git = require("gitode");
 ````
 
 ### Init new repository
-````
-git.init("/path/to/new/repo");
+````javascript
+git.init("/path/to/new/repo", function(){
+    console.log("Init it!");
+});
 
 // for a bare git repository
-git.initBare("/path/to/new/repo");
+git.initBare("/path/to/new/repo", function(){
+    console.log("Bare init it!");
+});
 ````
 
 ### Clone a repository
-````
-git.clone("https://github.com/example/foobar.git", "/path/to/cloned/repo");
+````javascript
+git.clone("https://github.com/example/foobar.git", "/path/to/cloned/repo", function() {
+    console.log("Cloned it");
+});
 ````
 
 
