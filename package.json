@@ -4,7 +4,7 @@
   "description": "An abstraction-layer to git for node.js.",
   "main": "git.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -R nyan -c -t 10000"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   ],
   "devDependencies": {
       "mocha": ">=1.9.0",
-      "should": ">=1.2.2"
+      "should": ">=1.2.2",
+      "fs.extra": ">=1.2.0"
     },
   "license": "MIT"
 }
