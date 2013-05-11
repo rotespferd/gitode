@@ -1,5 +1,7 @@
 # Gitode
 
+[![Build Status](https://travis-ci.org/rotespferd/gitode.png?branch=master)](https://travis-ci.org/rotespferd/gitode)
+
 Git(n)ode is an abstraction-layer to use [git](http://git-scm.com/) within node.js.
 
 ## Usage
