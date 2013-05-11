@@ -1,10 +1,10 @@
 {
   "name": "gitode",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An abstraction-layer to git for node.js.",
   "main": "git.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R nyan -c -t 10000"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,10 @@
       "email": "dev@mariansievers.de"
     } 
   ],
+  "devDependencies": {
+      "mocha": ">=1.9.0",
+      "should": ">=1.2.2",
+      "fs.extra": ">=1.2.0"
+    },
   "license": "MIT"
 }
