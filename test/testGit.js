@@ -101,8 +101,14 @@ describe("Gitode", function() {
         });
 
         describe("#branchCreate()", function() {
-            it("Should create a new branch", function() {
+            it("Should create a new branch", function(done) {
                 var branchname = "testbranch";
+                git.branchCreate(testBranchPath, branchname, function() {
+                    exec("cd " + testBranchPath + " && git branch", function(error, stdout, stderr) {
+                        stdout.indexOf(branchname).should.not.equal(-1);
+                        done();
+                    });
+                });
             });
         });
     });

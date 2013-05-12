@@ -44,7 +44,8 @@ exports.branchList = function(path, callback) {
 };
 
 exports.branchCreate = function(path, name, callback) {
-    // body
+    var cmd = "cd " + path + " && " + basiccmd + "branch " + name;
+    execCmd(cmd, callback);
 };
 
 exports.branchChange = function(path, name, callback) {
@@ -67,7 +68,9 @@ exports.commit = function(msg) {
 // helper methods
 function execCmd(cmd, callback) {
     exec(cmd, function(error, stdout, stderr) {
-        //console.log(stdout);
+        /*console.log(stdout);
+        console.log(stderr);
+        console.log(error);*/
         callback(stdout);
     });
 }
